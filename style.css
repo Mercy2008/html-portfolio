@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    background-color: #000;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #181a20;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: crimson;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    align-items: center;
+    background-color: black;
+    border-bottom: solid 1px white;
+    padding: 1rem;
+    color: crimson;
+}
+
+nav ul {
+    font-size: 1.3rem;
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+}
+
+nav ul:first-child {
+    background-image: -webkit-linear-gradient(125deg, #f2291b, #f7db25, #84f527);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+nav a {
+    color: crimson;
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 0.5rem;
+    transition: border 0.5s linear;
+}
+
+nav a:hover {
+    scale: 200%;
+    color: whitesmoke;
+    border-bottom: 2px solid crimson;
+    box-shadow: 0px 5px 15px rgba(250, 249, 249, 0.25);
+}
+
+nav p {
+    font-weight: 500;
+    font-family: "Londrina Sketch", sans-serif;
+    transition: all 0.4s ease;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+nav p:hover {
+    color: whitesmoke;
+}
+
+main {
+    height: 100dvh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 0 1rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#hero {
+    border-image: fill 0 linear-gradient(#0005,#000);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    align-items: start;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+#hero section {
+    font-weight: 200;
+    background-color: transparent;
+    gap: 0.1rem;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 500px;
+    position: relative;
+    width: 50vw;
+}
+
+#hero section > div {
+    position: relative;
+    top: 2rem;
+    width: 50vw;
+    height: 400px;  
+    background-color: #181a2021;
+    z-index: 1;
+}
+
+#back-img {
+    position: absolute;
+    width: 50vw;
+    height: 400px;
+    object-fit: cover;
+    z-index: 0;
+}
+
+aside {
+    position: absolute;
+    right: 0;
+    height: fit-content;
+    width: fit-content;
+    border: solid 1px white;
+    border-bottom-left-radius: 20px;
+    text-transform: uppercase;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+}
+
+aside div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+aside a {
+    background-color: red;
+    color: white;
+    border-radius: 25px;
+    width: auto;
+    height: fit-content;
+    text-align: center;
+    padding: 0.3rem 0.6rem;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+aside a:hover {
+    color: red;
+    background-color: whitesmoke;
+    scale: 110%;
+    text-decoration: none;
+}
+
+aside a:active {
+    background-color: whitesmoke;
+    color: red;
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+}
+
+article {
+    position: absolute;
+    opacity: 2;
+    top: 10rem;
+    z-index: 2;
+    width: 40vw;
+    height: 300px;
+    text-transform: uppercase;
+    color: red;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    font-weight: 300;
+    padding: 1rem;
+    background-color: transparent;
+}
+
+article span {
+    color: crimson;
+    text-transform: uppercase;
+}
+
+article img {
+    object-fit: contain;
+    width: 30%;
+    height: fit-content;
+}
+
+h2{
+    color: whitesmoke;
+}
+
+main section {
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin: 1rem;
+    padding: 1rem;
+    width: 97vw;
+    height: fit-content;
+    border: 2px solid transparent;
+    background-image: linear-gradient(65deg, rgba(139, 0, 0, 0.205), rgba(169, 169, 169, 0.068), rgba(139, 0, 0, 0.205));
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(233, 229, 229, 0.3) 0px 3px 7px -3px;
+    box-sizing: border-box;
+}
+
+div.genre-list {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 1rem 2rem !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    box-sizing: border-box;
+    width: 93vw;
+}
+
+.item {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-radius: 25px !important;
+}
+
+.info {
+    width: 200px;
+    height: 300px;
+    visibility: visible;
+    display: flex;
+    opacity: 0;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0.8rem;
+    z-index: 1;
+    justify-content: space-around;
+    flex-grow: 1;
+    transition: ease;
+    transition-duration: 500ms;
+    font-weight: 900;
+    background-color: rgba(14, 13, 13, 0.842);
+    color: rgb(255, 0, 0);
+    border-radius: 25px !important;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.info i:hover {
+    scale: 150%;
+    transition: ease;
+    transition-duration: 500ms;
+    color: white;
+    cursor: pointer;
+}
+
+.info ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.info span {
+    justify-content: center;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.info:hover {
+    opacity: 1;
+}
+
+.item img {
+    position: absolute;
+    top: 0;
+    height: 300px;
+    width: 200px;
+    object-fit: cover;
+    background-color: red;
+    border-radius: 25px;
+}
+
+div.genre-list p {
+    text-align: center;
+    color: white;
+}
+
+#news {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1rem;
+    height: 100dvw;
+    justify-content: center;
+    align-items: space-between;
+}
+
+#news h2 {
+    border-bottom: 3px solid red;
+    width: 20vw;
+    height: auto;
+}
